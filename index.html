@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mãe, eu te amo!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    .pulse {
+      animation: pulse 3s infinite ease-in-out;
+    }
+    #petalas {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+    }
+    #poema::after {
+      content: "|";
+      animation: blink 1s step-start infinite;
+      margin-left: 2px;
+      color: #c72c41;
+      font-weight: 900;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 to-pink-300 min-h-screen text-rose-900 font-sans overflow-x-hidden relative">
+
+  <canvas id="petalas"></canvas>
+
+  <header class="relative z-10 text-center px-4 pt-12 pb-16 max-w-4xl mx-auto">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-rose-700 pulse select-none drop-shadow-lg">Mãe, eu te amo!</h1>
+  <p class="text-xl md:text-2xl mt-2 mb-6 text-rose-600 font-semibold select-none">Você é a melhor mãe do mundo! 🌹</p>
+  <audio controls autoplay loop class="mx-auto rounded-md shadow-md outline-rose-500 outline-2 outline focus:outline-offset-2 w-full max-w-xs md:max-w-sm">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_bfcd81c36a.mp3?filename=calm-piano-110858.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+</header>
+ <section aria-label="Momentos com minha mãe" class="timeline relative max-w-4xl mx-auto px-4 mb-20 z-10">
+  <h2 class="text-center text-4xl font-extrabold mb-10 text-rose-700 select-none drop-shadow-md">Momentos com Você</h2>
+
+  <div class="relative before:absolute before:left-8 before:top-0 before:bottom-0 before:w-1.5 before:bg-rose-700 before:rounded">
+
+    <article tabindex="0" class="timeline-event relative ml-20 mb-16 pl-8 border-l-4 border-transparent hover:border-rose-700 transition-colors duration-300 focus:border-rose-700 focus:outline-none">
+      <p class="text-lg max-w-lg leading-relaxed">
+        Mãe, você sempre fez tudo parecer fácil, mesmo quando eu sei que não era. Te ver forte assim me inspira todo dia.
+      </p>
+      <img src="./src/prin4.jpg" alt="Foto da família" class="mt-4 w-full max-w-xs aspect-[3/4] object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 hover:rotate-2 transition-transform duration-300 select-none" loading="lazy" />
+    </article>
+
+    <article tabindex="0" class="timeline-event relative ml-20 mb-16 pl-8 border-l-4 border-transparent hover:border-rose-700 transition-colors duration-300 focus:border-rose-700 focus:outline-none">
+      <p class="text-lg max-w-lg leading-relaxed">
+        Eu amo como você cuida da casa, da gente, de tudo. Seu jeito de mostrar amor tá nos detalhes — e eu noto todos eles.
+      </p>
+      <img src="./src/prin3.jpg" alt="Foto com sorriso da mãe" class="mt-4 w-full max-w-xs aspect-[3/4] object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 hover:rotate-2 transition-transform duration-300 select-none" loading="lazy" />
+    </article>
+
+    <article tabindex="0" class="timeline-event relative ml-20 mb-16 pl-8 border-l-4 border-transparent hover:border-rose-700 transition-colors duration-300 focus:border-rose-700 focus:outline-none">
+      <p class="text-lg max-w-lg leading-relaxed">
+        Você é meu lugar seguro. Quando tudo parece confuso lá fora, é em você que eu penso pra me acalmar.
+      </p>
+      <img src="./src/prin2.jpg" alt="Foto do abraço" class="mt-4 w-full max-w-xs aspect-[3/4] object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 hover:rotate-2 transition-transform duration-300 select-none" loading="lazy" />
+    </article>
+
+    <article tabindex="0" class="timeline-event relative ml-20 mb-16 pl-8 border-l-4 border-transparent hover:border-rose-700 transition-colors duration-300 focus:border-rose-700 focus:outline-none">
+      <p class="text-lg max-w-lg leading-relaxed">
+        Mãe, se eu puder ser metade da pessoa que você é, já vou estar no caminho certo. Você é meu maior exemplo.
+      </p>
+      <img src="./src/prin1.jpg" alt="Foto inspiradora da mãe" class="mt-4 w-full max-w-xs aspect-[3/4] object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 hover:rotate-2 transition-transform duration-300 select-none" loading="lazy" />
+    </article>
+
+  </div>
+</section>
+
+
+  <!-- Mural de fotos -->
+<section aria-label="Mural de fotos da família" class="max-w-5xl mx-auto px-4 mb-20">
+  <h2 class="text-center text-4xl font-extrabold mb-10 text-rose-700 select-none drop-shadow-md">Mural de Fotos</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+    <img src="./src/464038213_8774302202590410_6488886532671268313_n.jpg" alt="Foto da família 1" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/WhatsApp Image 2025-05-29 at 15.36.03 (1).jpeg" alt="Foto da família 2" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/WhatsApp Image 2025-05-29 at 15.36.03.jpeg" alt="Foto da família 3" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/464373147_8787053044648659_8165773501172413523_n.jpg" alt="Foto da família 4" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/WhatsApp Image 2025-05-29 at 15.36.04.jpeg" alt="Foto da família 5" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/WhatsApp Image 2025-05-29 at 15.36.05.jpeg" alt="Foto da família 6" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/487044213_2030318237378647_5818294056727083479_n.jpg" alt="Foto da família 7" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+    <img src="./src/497509882_3200373376795494_9005770220381603005_n.jpg" alt="Foto da família 8" class="w-full aspect-[3/4] object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer select-none" loading="lazy" />
+  </div>
+</section>
+
+
+<section aria-label="Lista de coisas que amo na minha mãe" class="max-w-2xl mx-auto mb-20 px-6">
+  <h2 class="text-center text-4xl font-extrabold mb-10 text-rose-700 select-none drop-shadow-md">Coisas que Amo em Você</h2>
+  <ul class="lista-ama list-none bg-white/90 rounded-xl shadow-lg p-6 text-2xl font-semibold text-rose-800 space-y-5">
+    <li class="relative pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-3xl before:content-['❤️'] select-none">A forma como você protege quem ama, mesmo sendo brava às vezes</li>
+    <li class="relative pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-3xl before:content-['❤️'] select-none">Seu olhar que entende tudo, mesmo sem dizer uma palavra</li>
+    <li class="relative pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-3xl before:content-['❤️'] select-none">Como você enfrenta qualquer coisa por mim, sem pensar duas vezes</li>
+    <li class="relative pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-3xl before:content-['❤️'] select-none">Seu jeito firme de ensinar o que é certo (mesmo que eu reclame na hora)</li>
+    <li class="relative pl-10 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:text-3xl before:content-['❤️'] select-none">Porque no fundo, tudo o que você faz... é por amor. E eu sei disso</li>
+  </ul>
+</section>
+
+
+  <section id="poema-container" aria-label="Poema para minha mãe" class="max-w-3xl mx-auto mb-20 px-8 py-6 bg-white/90 rounded-2xl shadow-lg font-serif text-2xl italic text-rose-700 min-h-[140px] select-none relative">
+    <h2 class="text-center text-4xl font-extrabold mb-8 select-none drop-shadow-md">Um Poema pra você</h2>
+    <div id="poema" class="whitespace-pre-wrap"></div>
+  </section>
+
+  <section aria-label="Vídeo depoimento" class="max-w-3xl mx-auto mb-28 px-4">
+    <h2 class="text-center text-4xl font-extrabold mb-8 text-rose-700 select-none drop-shadow-md">Vídeo Especial</h2>
+    <video
+      id="video-depoimento"
+      controls
+      class="w-full rounded-3xl shadow-2xl border-4 border-rose-700 outline-rose-500 outline-2 outline-offset-2"
+      preload="metadata"
+      playsinline
+      >
+      <source src="./src/video.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+  </section>
+
+  <footer class="text-center text-rose-800 font-semibold text-lg py-6 select-none relative z-10">
+    ❤️ Feito com amor para minha mãe querida ❤️
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('petalas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    class Petala {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = 8 + Math.random() * 8;
+        this.speedY = 0.8 + Math.random() * 1.2;
+        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.angle = Math.random() * 2 * Math.PI;
+        this.spin = (Math.random() - 0.5) * 0.02;
+        this.opacity = 0.6 + Math.random() * 0.4;
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.angle) * 0.5;
+        this.angle += this.spin;
+        if (this.y > height) {
+          this.y = -this.size;
+          this.x = Math.random() * width;
+        }
+        if (this.x > width) this.x = 0;
+        if (this.x < 0) this.x = width;
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+        ctx.fillStyle = `rgba(199,44,65,${this.opacity})`;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, this.size * 0.6, this.size, 0, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    const petals = [];
+    for (let i = 0; i < 40; i++) {
+      petals.push(new Petala());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      petals.forEach(petala => {
+        petala.update();
+        petala.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Poema digitando
+    const poemaTexto = `Mãe, teu amor é luz que guia,\nEm cada passo, tua magia.\nTeu abraço, meu porto seguro,\nTe amo, hoje e no futuro.`;
+    const poemaEl = document.getElementById('poema');
+    let idx = 0;
+    function digitar() {
+      if (idx <= poemaTexto.length) {
+        poemaEl.textContent = poemaTexto.slice(0, idx);
+        idx++;
+        setTimeout(digitar, 100);
+      }
+    }
+    digitar();
+  </script>
+</body>
+</html>
